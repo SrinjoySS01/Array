@@ -1,5 +1,5 @@
-made this just for fun since i'm learning C ;-;
-#Array in c
+made this just for fun since i'm learning C ;-;  
+# Array in c
 implemented array using structure in c  
 ```c
 struct Array {
@@ -11,12 +11,12 @@ struct Array {
     int (*indexOf)(void* element);
 }
 ```
-##create a new Array
+## create a new Array
 lets create an array of length 4  
 ```c
 Array foo = newArray(4);
 ```
-##initialize an Array
+## initialize an Array
 you need to create the primitive array first, for example:  
 ```c
 int bar[] = { 1, 2, 3, 4 };
@@ -29,13 +29,13 @@ then use the macro `bindArrayFromPrimitive(arrayPrimitive, arr)` to initialize t
 ```c
 bindArrayFromPrimitive(bar, foo);
 ```
-##initialize Array from existing Array
+## initialize Array from existing Array
 first copy the array then use the macro `bindArrayFromArray(array)`
 ```c
 Array copy = foo;
 bindArrayFromArray(copy)
 ```
-###how to use `filter`, `forEach`, `map`, `indexOf`:
+### how to use `filter`, `forEach`, `map`, `indexOf`:
 you can define your own functions for `consumer`, `predicate` and `supplier`  
 or you can use the macros `consume(functionname, body)`, `supply(functionname, body)`, `predicate(functionname, body)`
 ```c
